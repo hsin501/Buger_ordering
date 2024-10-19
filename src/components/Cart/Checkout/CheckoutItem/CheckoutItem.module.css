@@ -1,0 +1,117 @@
+.CheckoutItem {
+  display: flex;
+  align-items: center;
+  padding: min(2vh, 16px) 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.MealImg {
+  width: min(22vh, 170px);
+  height: min(22vh, 170px);
+  margin-right: min(3vh, 24px);
+  flex-shrink: 0;
+  overflow: hidden; /* 添加這行 */
+}
+
+.MealImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 改為 cover */
+  border-radius: min(2vh, 16px);
+}
+
+.Desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.Title {
+  font-size: min(2.8vh, 22px);
+  font-weight: bold;
+  margin-bottom: min(1vh, 8px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.PriceOuter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Price::before {
+  content: '$';
+  font-weight: normal;
+  font-size: min(2.2vh, 18px);
+  padding-right: min(0.5vh, 4px);
+}
+
+.Price {
+  font-size: min(2.6vh, 20px);
+  font-weight: 800;
+  color: #f00;
+}
+
+@media (max-width: 1024px) {
+  .MealImg {
+    width: min(20vh, 150px);
+    height: min(20vh, 150px);
+    margin-right: min(2.5vh, 20px);
+  }
+
+  .Title {
+    font-size: min(2.6vh, 20px);
+  }
+
+  .Price::before {
+    font-size: min(2vh, 16px);
+  }
+
+  .Price {
+    font-size: min(2.4vh, 18px);
+  }
+}
+
+@media (max-width: 768px) {
+  .MealImg {
+    width: min(18vh, 130px);
+    height: min(18vh, 130px);
+    margin-right: min(2vh, 16px);
+  }
+
+  .Title {
+    font-size: min(2.4vh, 18px);
+  }
+
+  .Price::before {
+    font-size: min(1.8vh, 14px);
+  }
+
+  .Price {
+    font-size: min(2.2vh, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .MealImg {
+    width: min(16vh, 110px);
+    height: min(16vh, 110px);
+    margin-right: min(1.5vh, 12px);
+  }
+
+  .Title {
+    font-size: min(2.2vh, 16px);
+  }
+
+  .Price::before {
+    font-size: min(1.6vh, 12px);
+  }
+
+  .Price {
+    font-size: min(2vh, 14px);
+  }
+}

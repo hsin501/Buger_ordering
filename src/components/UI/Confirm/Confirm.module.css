@@ -1,0 +1,114 @@
+.ConfirmOuter {
+  z-index: 9999;
+}
+
+.Confirm {
+  position: fixed;
+  width: min(75vh, 80%);
+  background-color: #e7d9d9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: min(2vh, 16px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: min(2vh, 16px);
+}
+
+.ConfirmText {
+  color: #5f271a;
+  font-size: min(4vh, 32px);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: min(2vh, 16px);
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Cancel,
+.Ok {
+  border: none;
+  background-color: #fff;
+  width: min(11vh, 90px);
+  height: min(5vh, 40px);
+  border-radius: min(2.5vh, 20px);
+  font-size: min(1.8vh, 14px);
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 min(1vh, 8px);
+}
+
+.Ok {
+  background-color: #ffc92e;
+}
+
+.Cancel:hover,
+.Ok:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .Confirm {
+    width: min(80vh, 85%);
+    padding: min(1.8vh, 14px);
+  }
+
+  .ConfirmText {
+    font-size: min(2vh, 16px);
+    margin-bottom: min(1.8vh, 14px);
+  }
+
+  .Cancel,
+  .Ok {
+    width: min(10vh, 80px);
+    height: min(4.5vh, 36px);
+    font-size: min(1.6vh, 13px);
+  }
+}
+
+@media (max-width: 768px) {
+  .Confirm {
+    width: min(85vh, 90%);
+    padding: min(1.6vh, 12px);
+  }
+
+  .ConfirmText {
+    font-size: min(1.8vh, 14px);
+    margin-bottom: min(1.6vh, 12px);
+  }
+
+  .Cancel,
+  .Ok {
+    width: min(9vh, 70px);
+    height: min(4vh, 32px);
+    font-size: min(1.4vh, 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Confirm {
+    width: 90%;
+    padding: min(1.4vh, 10px);
+    border-radius: min(3.5vh, 28px);
+  }
+
+  .ConfirmText {
+    font-size: min(1.6vh, 13px);
+    margin-bottom: min(1.4vh, 10px);
+  }
+
+  .Cancel,
+  .Ok {
+    width: min(8vh, 60px);
+    height: min(3.5vh, 28px);
+    font-size: min(1.2vh, 10px);
+    border-radius: min(2vh, 16px);
+  }
+}

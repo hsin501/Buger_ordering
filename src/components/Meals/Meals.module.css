@@ -1,0 +1,27 @@
+.Meals {
+  position: fixed;
+  top: min(12vh, 100px);
+  left: 0;
+  right: 0;
+  bottom: min(14vh, 110px);
+  background-color: #fff;
+  overflow: auto;
+  padding-bottom: min(2vh, 16px);
+  font-size: min(2.4vh, 20px);
+}
+
+@media (max-width: 768px) {
+  .Meals {
+    top: min(10vh, 80px);
+    bottom: min(12vh, 95px);
+    font-size: min(2.2vh, 18px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Meals {
+    top: min(8vh, 65px);
+    bottom: min(10vh, 80px);
+    font-size: min(2vh, 16px);
+  }
+}

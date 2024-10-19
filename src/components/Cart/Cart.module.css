@@ -1,0 +1,162 @@
+.Cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: min(75vh, 80%);
+  height: min(8vh, 65px);
+  background-color: #333;
+  bottom: min(4vh, 35px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: min(4vh, 32px);
+  z-index: 9999;
+  padding: 0 min(2vh, 16px);
+  cursor: pointer;
+}
+
+.Icon {
+  position: absolute;
+  width: min(10vh, 75px);
+  height: min(10vh, 75px);
+  bottom: min(-0.3vh, -2px);
+  left: min(1.2vh, 10px);
+}
+
+.Icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.TotalAmount {
+  position: absolute;
+  width: min(4.5vh, 36px);
+  height: min(4.5vh, 36px);
+  background-color: #f00;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: min(4.5vh, 36px);
+  font-size: min(2.2vh, 18px);
+  right: min(-0.8vh, -6px);
+  top: min(-0.8vh, -6px);
+}
+
+.NoMeal {
+  color: #aaa !important;
+}
+
+.Price,
+.NoMeal {
+  display: flex;
+  align-items: center;
+  margin-left: min(14vh, 105px);
+  color: #fff;
+  font-weight: bold;
+  font-size: min(3.2vh, 26px);
+}
+
+.Price::before {
+  content: '$';
+  font-size: min(2.8vh, 22px);
+}
+
+.Button {
+  border: none;
+  background-color: #ffc92e;
+  width: min(22vh, 170px);
+  height: min(6vh, 48px);
+  border-radius: min(3vh, 24px);
+  font-size: min(2.2vh, 18px);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Disabled {
+  background-color: #707070;
+  color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .Cart {
+    width: min(80vh, 85%);
+    height: min(7.5vh, 60px);
+    bottom: min(3.5vh, 30px);
+  }
+
+  .Icon {
+    width: min(9vh, 70px);
+    height: min(9vh, 70px);
+  }
+
+  .Price,
+  .NoMeal {
+    font-size: min(3vh, 24px);
+    margin-left: min(13vh, 100px);
+  }
+
+  .Button {
+    width: min(20vh, 160px);
+    height: min(5.5vh, 45px);
+    font-size: min(2vh, 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .Cart {
+    width: min(85vh, 90%);
+    height: min(7vh, 55px);
+    bottom: min(3vh, 25px);
+  }
+
+  .Icon {
+    width: min(8vh, 65px);
+    height: min(8vh, 65px);
+  }
+
+  .Price,
+  .NoMeal {
+    font-size: min(2.8vh, 22px);
+    margin-left: min(12vh, 95px);
+  }
+
+  .Button {
+    width: min(18vh, 150px);
+    height: min(5vh, 40px);
+    font-size: min(1.8vh, 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Cart {
+    width: 90%;
+    height: min(6.5vh, 50px);
+    bottom: min(2.5vh, 20px);
+    border-radius: min(3.5vh, 28px);
+  }
+
+  .Icon {
+    width: min(7vh, 55px);
+    height: min(7vh, 55px);
+    bottom: min(0vh, 0px);
+    left: min(0.8vh, 6px);
+  }
+
+  .Price,
+  .NoMeal {
+    font-size: min(2.5vh, 20px);
+    margin-left: min(10vh, 80px);
+  }
+
+  .Button {
+    width: min(16vh, 130px);
+    height: min(4.5vh, 36px);
+    font-size: min(1.6vh, 13px);
+    border-radius: min(2.5vh, 20px);
+  }
+}

@@ -1,0 +1,155 @@
+.Checkout {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #eee;
+  padding: min(2vh, 16px);
+  display: flex;
+  flex-direction: column;
+}
+
+.Close {
+  color: #000;
+  font-size: min(3.6vh, 28px);
+  align-self: flex-end;
+  margin-right: min(2vh, 16px);
+  margin-bottom: min(1vh, 6px);
+  cursor: pointer;
+}
+
+.MealsDetails {
+  background-color: #fff;
+  border-radius: min(2.5vh, 20px);
+  padding: 0 min(2vh, 16px);
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  font-size: min(2.2vh, 18px);
+  border-bottom: 1px solid #f2f2f2;
+  height: min(8vh, 64px);
+  padding: 0 min(2vh, 16px); /* 添加左右內邊距 */
+}
+.Header h2 {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+
+  white-space: nowrap;
+  overflow: hidden; /* 防止文字溢出 */
+  text-overflow: ellipsis; /* 文字溢出時顯示省略號 */
+}
+
+.Header h2::before {
+  content: '☉ — ————————— ';
+  margin: 0 min(1vh, 8px);
+}
+.Header h2::after {
+  content: '————————— — ☉';
+  margin: 0 min(1vh, 8px);
+}
+
+@media (max-width: 768px) {
+  .Header h2::before {
+    content: '☉————';
+  }
+  .Header h2::after {
+    content: '————☉';
+  }
+}
+
+@media (max-width: 480px) {
+  .Header h2::before {
+    content: '☉—';
+  }
+  .Header h2::after {
+    content: '—☉';
+  }
+}
+.Footer {
+  position: relative;
+  height: min(12vh, 96px);
+  border-top: 1px #f2f2f2 dashed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 800;
+  font-size: min(3vh, 24px);
+}
+
+.TotalPrice::before {
+  content: '共計$';
+  font-weight: normal;
+  font-size: min(2vh, 16px);
+  margin-right: min(1vh, 8px);
+}
+
+.Footer::after,
+.Footer::before {
+  content: '';
+  position: absolute;
+  width: min(3.2vh, 26px);
+  height: min(3.2vh, 26px);
+  border-radius: 50%;
+  background-color: #eee;
+  top: min(-1vh, -8px);
+  left: min(-3vh, -24px);
+}
+
+.Footer::after {
+  left: auto;
+  right: min(-3vh, -24px);
+}
+
+.Meals {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .Close {
+    font-size: min(3.2vh, 24px);
+  }
+
+  .Header {
+    font-size: min(2vh, 16px);
+    height: min(7vh, 56px);
+  }
+
+  .Footer {
+    height: min(10vh, 80px);
+    font-size: min(2.8vh, 22px);
+  }
+
+  .TotalPrice::before {
+    font-size: min(1.8vh, 14px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Close {
+    font-size: min(2.8vh, 20px);
+  }
+
+  .Header {
+    font-size: min(1.8vh, 14px);
+    height: min(6vh, 48px);
+  }
+
+  .Footer {
+    height: min(9vh, 72px);
+    font-size: min(2.6vh, 20px);
+  }
+
+  .TotalPrice::before {
+    font-size: min(1.6vh, 12px);
+  }
+}

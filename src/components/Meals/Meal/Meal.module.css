@@ -1,0 +1,147 @@
+.Meal {
+  display: flex;
+  align-items: center;
+  padding: min(3vh, 24px) min(6vh, 48px); /* 減少內邊距 */
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.ImgBox {
+  width: min(26vh, 260px); /* 稍微減小圖片尺寸 */
+  height: min(26vh, 260px);
+  margin-right: min(5vh, 40px); /* 稍微減少右邊距 */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: min(2.5vh, 20px);
+}
+
+.ImgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 改為 contain */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.DescBox {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  font-size: min(3.2vh, 28px); /* 稍微減小字體大小 */
+  font-weight: bold;
+  margin-bottom: min(1.5vh, 12px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Desc {
+  font-size: min(2.4vh, 20px); /* 稍微減小字體大小 */
+  color: #777;
+  margin-bottom: min(1.5vh, 12px);
+  overflow: visible; /* 改為 visible */
+  word-wrap: break-word; /* 添加這行 */
+  white-space: normal; /* 添加這行 */
+  padding-right: min(8vh, 64px); /* 減少右側內邊距 */
+}
+
+.PriceAndNum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  position: relative; /* 添加相對定位 */
+}
+
+.Price {
+  font-size: min(2.8vh, 22px); /* 稍微減小字體大小 */
+  font-weight: bold;
+  color: rgb(238, 46, 46);
+}
+
+/* 新增樣式來調整按鈕位置 */
+.PriceAndNum > div:last-child {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .Meal {
+    padding: min(2vh, 16px) min(3vh, 24px); /* 調整中等屏幕的左右內邊距 */
+  }
+
+  .ImgBox {
+    width: min(16vh, 130px);
+    height: min(16vh, 130px);
+    margin-right: min(3vh, 24px);
+  }
+
+  .Title {
+    font-size: min(2.6vh, 22px);
+  }
+
+  .Desc {
+    font-size: min(1.8vh, 15px);
+    padding-right: min(4vh, 32px); /* 調整中等屏幕的右側內邊距 */
+  }
+
+  .Price {
+    font-size: min(2.2vh, 18px);
+  }
+}
+
+@media (max-width: 768px) {
+  .Meal {
+    padding: min(1.5vh, 12px) min(2vh, 16px); /* 調整小屏幕的左右內邊距 */
+  }
+
+  .ImgBox {
+    width: min(14vh, 110px);
+    height: min(14vh, 110px);
+    margin-right: min(2vh, 16px);
+  }
+
+  .Title {
+    font-size: min(2.4vh, 20px);
+  }
+
+  .Desc {
+    font-size: min(1.6vh, 13px);
+    padding-right: min(3vh, 24px); /* 調整小屏幕的右側內邊距 */
+  }
+
+  .Price {
+    font-size: min(2vh, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Meal {
+    padding: min(1.5vh, 24px) min(1.5vh, 12px); /* 保持最小屏幕的左右內邊距不變 */
+  }
+
+  .ImgBox {
+    width: min(12vh, 90px);
+    height: min(12vh, 90px);
+    margin-right: min(1.5vh, 12px);
+  }
+
+  .Title {
+    font-size: min(2.2vh, 18px);
+  }
+
+  .Desc {
+    font-size: min(1.4vh, 11px);
+    padding-right: min(2vh, 16px); /* 調整最小屏幕的右側內邊距 */
+  }
+
+  .Price {
+    font-size: min(1.8vh, 14px);
+  }
+}

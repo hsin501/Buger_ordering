@@ -1,0 +1,80 @@
+.FilterMeals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: min(12vh, 100px); /* 增加大尺寸的高度 */
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.searchInput {
+  height: min(6vh, 50px);
+  width: min(75vh, 600px);
+  border: none;
+  border-radius: min(3vh, 25px);
+  background-color: #f2f2f2;
+  font-size: min(2.2vh, 18px);
+  padding-left: min(6vh, 48px);
+  padding-right: min(2vh, 16px); /* 添加右側內邊距 */
+  line-height: min(6vh, 50px); /* 設置行高等於高度 */
+  vertical-align: middle; /* 垂直對齊 */
+}
+
+.searchIcon {
+  position: absolute;
+  color: #aaa;
+  font-size: min(3vh, 24px); /* 增加圖標大小 */
+  left: min(2vh, 16px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.InputOuter {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .FilterMeals {
+    height: min(11vh, 90px); /* 增加高度 */
+  }
+
+  .searchInput {
+    width: min(88vh, 96%); /* 增加寬度 */
+    height: min(6vh, 48px); /* 增加高度 */
+    font-size: min(2.1vh, 17px); /* 稍微增加字體大小 */
+    padding-left: min(5.8vh, 46px);
+    padding-right: min(2vh, 16px);
+    line-height: min(6vh, 48px); /* 調整行高 */
+    border-radius: min(3.2vh, 26px); /* 稍微增加圓角 */
+  }
+
+  .searchIcon {
+    font-size: min(3vh, 24px); /* 增加圖標大小 */
+    left: min(2vh, 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .FilterMeals {
+    height: min(9vh, 70px);
+  }
+
+  .searchInput {
+    width: 92%;
+    height: min(5vh, 40px);
+    font-size: min(1.6vh, 13px);
+    padding-left: min(4.5vh, 36px);
+    line-height: min(5vh, 40px); /* 調整行高 */
+  }
+
+  .searchIcon {
+    font-size: min(2.2vh, 18px);
+    left: min(1.4vh, 11px);
+  }
+}

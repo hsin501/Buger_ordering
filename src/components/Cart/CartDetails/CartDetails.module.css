@@ -1,0 +1,75 @@
+.CartDetails {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-bottom: min(12vh, 100px);
+  border-radius: min(2.5vh, 20px) min(2.5vh, 20px) 0 0;
+  max-height: 70vh;
+  z-index: 9998;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: min(2vh, 16px);
+}
+
+.Title {
+  font-weight: bold;
+  font-size: min(2.2vh, 18px);
+  margin: 0;
+}
+
+.Clear {
+  color: #aaa;
+  font-size: min(1.8vh, 14px);
+}
+
+.Clear span {
+  margin-left: min(0.6vh, 5px);
+  cursor: pointer;
+}
+
+.MealList {
+  overflow: auto;
+  max-height: calc(70vh - min(12vh, 100px) - min(4vh, 32px));
+}
+
+@media (max-width: 768px) {
+  .CartDetails {
+    max-height: 75vh;
+    padding-bottom: min(10vh, 95px);
+  }
+
+  .MealList {
+    max-height: calc(75vh - min(10vh, 80px) - min(4vh, 32px));
+  }
+}
+
+@media (max-width: 480px) {
+  .CartDetails {
+    max-height: 85vh;
+    padding-bottom: min(9vh, 80px);
+  }
+
+  .Header {
+    padding: min(1.5vh, 12px);
+  }
+
+  .Title {
+    font-size: min(2vh, 16px);
+  }
+
+  .Clear {
+    font-size: min(1.6vh, 13px);
+  }
+
+  .MealList {
+    max-height: calc(85vh - min(9vh, 70px) - min(3vh, 24px));
+  }
+}
