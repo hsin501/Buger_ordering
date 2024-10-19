@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Buger_ordering/static/css/main.4d3a52b5.css",
-    "main.js": "/Buger_ordering/static/js/main.1d25dcb0.js",
+    "main.js": "/Buger_ordering/static/js/main.285ffce7.js",
     "static/media/bag.png": "/Buger_ordering/static/media/bag.c0b20df765f996bcc635.png",
     "index.html": "/Buger_ordering/index.html",
     "main.4d3a52b5.css.map": "/Buger_ordering/static/css/main.4d3a52b5.css.map",
-    "main.1d25dcb0.js.map": "/Buger_ordering/static/js/main.1d25dcb0.js.map"
+    "main.285ffce7.js.map": "/Buger_ordering/static/js/main.285ffce7.js.map"
   },
   "entrypoints": [
     "static/css/main.4d3a52b5.css",
-    "static/js/main.1d25dcb0.js"
+    "static/js/main.285ffce7.js"
   ]
 }
